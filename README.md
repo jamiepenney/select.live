@@ -22,3 +22,7 @@ Data is polled every 30 seconds.
 ## Upgrading from the YAML version
 
 Existing `sensor: - platform: select_live` config is imported automatically on restart, and existing entities keep their entity IDs and history. Once imported, remove the YAML block.
+
+## License
+
+MIT, see [LICENSE](LICENSE).
