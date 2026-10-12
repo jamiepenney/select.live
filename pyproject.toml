@@ -1,6 +1,6 @@
 [project]
 name = "select-live"
-version = "2.0.0"
+version = "2.0.1"
 license = "MIT"
 description = "Home Assistant integration for Selectronic SP PRO inverters via local connection to select.live device"
 requires-python = ">=3.14.2"
@@ -11,6 +11,7 @@ dev = [
     "homeassistant",
     "mypy",
     "pyright",
+    "pytest-homeassistant-custom-component>=0.13.372",
     "ruff",
 ]
 
@@ -30,3 +31,7 @@ target-version = "py314"
 venvPath = "."
 venv = ".venv"
 include = ["custom_components"]
+
+[tool.pytest.ini_options]
+asyncio_mode = "auto"
+testpaths = ["tests"]

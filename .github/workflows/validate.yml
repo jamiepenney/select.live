@@ -38,3 +38,5 @@ jobs:
         run: uv run mypy custom_components/select_live
       - name: Pyright
         run: uv run pyright
+      - name: Tests
+        run: uv run pytest
