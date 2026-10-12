@@ -1,0 +1,74 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "Connect to select.live",
+        "description": "Enter the address of your select.live device and the SP PRO device ID.",
+        "data": {
+          "ip_address": "Host or IP address",
+          "device_id": "Device ID"
+        },
+        "data_description": {
+          "ip_address": "Usually `selectronic` or the device's IP address.",
+          "device_id": "The device ID shown in the select.live web interface URL."
+        }
+      },
+      "reconfigure": {
+        "title": "Reconfigure select.live",
+        "data": {
+          "ip_address": "Host or IP address",
+          "device_id": "Device ID"
+        }
+      }
+    },
+    "error": {
+      "cannot_connect": "Could not connect to the device. Check the host and device ID."
+    },
+    "abort": {
+      "already_configured": "This device is already configured.",
+      "cannot_connect": "Could not connect to the device.",
+      "reconfigure_successful": "Reconfiguration successful.",
+      "wrong_device": "The device ID must match the one already configured."
+    }
+  },
+  "entity": {
+    "sensor": {
+      "battery_soc": {
+        "name": "Battery state of charge"
+      },
+      "load_w": {
+        "name": "Power used"
+      },
+      "grid_w": {
+        "name": "Grid load"
+      },
+      "battery_w": {
+        "name": "Battery load"
+      },
+      "solarinverter_w": {
+        "name": "Solar load"
+      },
+      "grid_out_wh_today": {
+        "name": "Exported energy today"
+      },
+      "load_wh_today": {
+        "name": "AC load today"
+      },
+      "grid_in_wh_today": {
+        "name": "AC input energy today"
+      },
+      "battery_in_wh_today": {
+        "name": "Battery input today"
+      },
+      "battery_out_wh_today": {
+        "name": "Battery output today"
+      }
+    }
+  },
+  "issues": {
+    "deprecated_yaml_import_issue_cannot_connect": {
+      "title": "select.live YAML import failed",
+      "description": "Your YAML configuration could not be imported because the device could not be reached. Remove the `select_live` sensor from configuration.yaml and add the integration from Settings → Devices & services."
+    }
+  }
+}
